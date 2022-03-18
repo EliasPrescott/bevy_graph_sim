@@ -123,13 +123,13 @@ fn get_primary_window_size(windows: &Res<Windows>) -> Vec2 {
 
 /// Spawn a camera like this
 fn spawn_camera(mut commands: Commands) {
-    let translation = Vec3::new(50., 50., 0.);
+    let translation = Vec3::new(350., 250., 350.);
     let radius = translation.length();
 
     commands.spawn_bundle(PerspectiveCameraBundle {
         perspective_projection: PerspectiveProjection {
             // Setting a custom far value to increase view distance
-            far: 10000.,
+            far: 100000.,
             ..Default::default()
         },
         transform: Transform::from_translation(translation)

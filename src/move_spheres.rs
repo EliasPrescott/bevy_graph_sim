@@ -31,10 +31,10 @@ fn setup_ui_state(
     commands.insert_resource(UiState {
             x_func: Arc::clone(&parser.parse("x")),
             // Cool Y formula: sin(x / time * 25) * 25
-            y_func: Arc::clone(&parser.parse("y")),
+            y_func: Arc::clone(&parser.parse("sin(x - time) * 10")),
             z_func: Arc::clone(&parser.parse("z")),
             x_string: String::from("x"),
-            y_string: String::from("y"),
+            y_string: String::from("sin(x - time) * 10"),
             z_string: String::from("z"),
             error: "".to_string()
         });
