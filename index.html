@@ -31,4 +31,11 @@
   import init from './bevy_graph_sim.js'
   init()
 </script>
+<script>
+    setTimeout(function() { 
+      document.querySelector('canvas').oncontextmenu = function(e) {
+         e.preventDefault(); e.stopPropagation(); 
+      }
+    }, 7500);
+</script>
 </html>
